@@ -1,20 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f7f9fc;
     color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: #0073e6;
     color: white;
-    padding: 10px 0;
+    padding: 20px;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
 nav ul {
@@ -30,20 +31,95 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 section {
-    padding: 20px;
+    padding: 40px 20px;
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 900px;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#about {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0073e6;
+    font-size: 2em;
+}
+
+.interest-list {
+    list-style: none;
+    padding: 0;
+}
+
+.interest-list li {
+    margin: 10px 0;
+    font-size: 1.1em;
+    padding-left: 20px;
+    position: relative;
+}
+
+.interest-list li:before {
+    content: "•";
+    color: #0073e6;
+    position: absolute;
+    left: 0;
+    font-size: 1.5em;
+}
+
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
-    background-color: #333;
+    padding: 20px;
+    background-color: #0073e6;
     color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animaciones para los iconos en la lista de intereses */
+.interest-list i {
+    margin-right: 10px;
+    color: #0073e6;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.interest-list li:hover i {
+    transform: scale(1.2); /* Efecto de zoom al hacer hover */
+    color: #005bb5;
+}
+
+/* Transiciones para enlaces */
+a {
+    color: #0073e6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #005bb5; /* Cambia el color al hacer hover */
+    text-decoration: underline;
 }
