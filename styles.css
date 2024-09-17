@@ -168,21 +168,96 @@ a:hover {
     display: block;
 }
 
-/* Modo oscuro */
-body.dark-mode {
-    background-color: #121212;
+
+/* Botón "Cambiar tema" estilizado y colocado */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #0073e6;
     color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-body.dark-mode nav, body.dark-mode footer {
+#theme-toggle:hover {
+    background-color: #005bb5;
+}
+
+/* Modo oscuro general */
+body.dark-mode {
+    background-color: #121212;
+    color: white; /* Color base del texto */
+}
+
+/* Textos de las secciones en modo oscuro */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode p, 
+body.dark-mode li {
+    color: white; /* Asegura que los textos sean visibles en modo oscuro */
+}
+
+/* Enlaces en modo oscuro */
+body.dark-mode a {
+    color: #bb86fc; /* Enlaces con un color que resalta en el modo oscuro */
+}
+
+body.dark-mode a:hover {
+    color: #8b59c4; /* Enlace al hacer hover */
+}
+
+/* Iconos en la lista de intereses en modo oscuro */
+body.dark-mode .interest-list i {
+    color: #bb86fc; /* Color de los iconos en el modo oscuro */
+}
+
+/* Navegación en modo oscuro */
+body.dark-mode nav {
     background-color: #1e1e1e;
 }
 
-body.dark-mode a {
+body.dark-mode nav ul li a {
+    color: white;
+}
+
+body.dark-mode nav ul li a:hover {
     color: #bb86fc;
 }
 
-/* Estilos generales */
+/* Fondo de la navegación en modo oscuro */
+body.dark-mode header {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+/* Botón hamburguesa en modo oscuro */
+body.dark-mode .hamburger {
+    color: white;
+}
+
+/* Botón "Volver arriba" en modo oscuro */
+body.dark-mode #back-to-top {
+    background-color: #bb86fc;
+    color: white;
+}
+
+/* Estilo para evitar problemas de desaparición de texto en modo oscuro */
+body.dark-mode p, body.dark-mode h1, body.dark-mode h2 {
+    color: white;
+}
+
+/* Estilo general para hover y transiciones */
 button {
     transition: background-color 0.3s ease;
 }
