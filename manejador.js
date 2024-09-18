@@ -56,4 +56,17 @@ document.addEventListener("DOMContentLoaded", function() {
             behavior: 'smooth'
         });
     });
+
+    // Animaciones de entrada al hacer scroll (Scroll animations)
+    const elements = document.querySelectorAll('.animate');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    elements.forEach(el => observer.observe(el));
 });
