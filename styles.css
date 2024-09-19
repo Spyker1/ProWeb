@@ -328,3 +328,85 @@ button:hover {
     transform: scale(1.2);
     color: #005bb5;
 }
+
+/* Sección de Cursos */
+#courses {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f7f9fc; /* Color de fondo claro para el modo claro */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Transiciones suaves */
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar las tarjetas en la pantalla */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin-top: 20px;
+}
+
+.course-card {
+    background-color: white; /* Fondo blanco en modo claro */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px;
+    width: 250px; /* Ancho fijo de las tarjetas */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease, color 0.5s ease; /* Transición para fondo y texto */
+}
+
+.course-card h3 {
+    font-size: 1.2em;
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+/* Efecto hover para las tarjetas */
+.course-card:hover {
+    transform: translateY(-5px); /* Levanta la tarjeta al hacer hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+}
+
+/* Modo oscuro: fondo de las tarjetas y texto */
+body.dark-mode #courses {
+    background-color: #121212; /* Fondo oscuro para la sección en modo oscuro */
+}
+
+body.dark-mode .course-card {
+    background-color: #1e1e1e; /* Fondo oscuro para las tarjetas */
+    color: white; /* Texto blanco en modo oscuro */
+}
+
+body.dark-mode .course-card h3 {
+    color: #bb86fc; /* Título con color resaltado en modo oscuro */
+}
+
+body.dark-mode .course-card p {
+    color: #bbbbbb; /* Texto ligeramente gris para mejor contraste */
+}
+
+body.dark-mode .course-card img {
+    border: 1px solid #333; /* Borde de la imagen en modo oscuro */
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .course-card {
+        width: 100%; /* Las tarjetas ocuparán todo el ancho en pantallas pequeñas */
+    }
+}
+
