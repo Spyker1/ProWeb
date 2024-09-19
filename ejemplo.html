@@ -10,100 +10,118 @@
 </head>
 <body>
     <div id="particles"></div> <!-- Contenedor para las partículas -->
+
+    <!-- Header -->
     <header>
-        <h1>Bienvenido a la página de Julian Alejandro Rodríguez Lopez</h1>
+        <h1 id="main-title">Bienvenido a la página de Julian Alejandro Rodríguez Lopez</h1>
+
+        <!-- Selector de idiomas -->
+        <div id="language-selector">
+            <button data-lang="es">Español</button>
+            <button data-lang="en">English</button>
+        </div>
+
         <button class="hamburger" id="hamburger">&#9776;</button> <!-- Menú hamburguesa -->
         <nav id="navbar">
             <ul>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#projects">Intereses</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#about" id="nav-about">Sobre mí</a></li>
+                <li><a href="#projects" id="nav-projects">Intereses</a></li>
+                <li><a href="#courses" id="nav-courses">Cursos</a></li>
+                <li><a href="#contact" id="nav-contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Sección "Sobre mí" -->
     <section id="about">
         <img src="foto.jpg" alt="Foto" class="profile-pic">
-        <h2>Sobre mí</h2>
-        <p>Soy Julian Alejandro Rodríguez Lopez, un apasionado desarrollador de Big Data, con experiencia en HTML, CSS, JavaScript, entre otros lenguajes y tecnologías.</p>
+        <h2 id="about-title">Sobre mí</h2>
+        <p id="about-description">
+            Soy Julian Alejandro Rodríguez Lopez, un apasionado desarrollador de Big Data, con experiencia en HTML, CSS, JavaScript, entre otros lenguajes y tecnologías.
+        </p>
     </section>
 
+    <!-- Sección de intereses -->
     <section id="projects" class="animate">
-        <h2>Mis intereses</h2>
+        <h2 id="projects-title">Mis intereses</h2>
         <ul class="interest-list">
-            <li><i class="fas fa-code"></i> Programación web tanto front como back.</li>
-            <li><i class="fas fa-robot"></i> Inteligencia Artificial.</li>
-            <li><i class="fas fa-database"></i> Analisis de datos.</li>
-            <li><i class="fas fa-cogs"></i> Programación con Low Code.</li>
-            <li><i class="fas fa-server"></i> Desarrollo de APIs.</li>
+            <li id="interest-1"><i class="fas fa-code"></i> Programación web tanto front como back.</li>
+            <li id="interest-2"><i class="fas fa-robot"></i> Inteligencia Artificial.</li>
+            <li id="interest-3"><i class="fas fa-database"></i> Analisis de datos.</li>
+            <li id="interest-4"><i class="fas fa-cogs"></i> Programación con Low Code.</li>
+            <li id="interest-5"><i class="fas fa-server"></i> Desarrollo de APIs.</li>
         </ul>
     </section>
 
     <!-- Botón para cambiar entre claro/oscuro con icono de sol y luna -->
-<button id="theme-toggle">
-    <i class="fas fa-sun"></i> <!-- Icono de sol por defecto -->
-</button>
-
+    <button id="theme-toggle">
+        <i class="fas fa-sun"></i> <!-- Icono de sol por defecto -->
+    </button>
 
     <!-- Botón "Volver arriba" -->
     <button id="back-to-top">&#8679;</button>
 
+    <!-- Sección de Cursos -->
     <section id="courses" class="animate">
-        <h2>Mis Cursos Completados</h2>
-        <div class="course-list">
-            <div class="course-card">
-                <h3>Diseñador de peticiones para modelos
-                    de IAgenerativa</h3>
-                <p>Institución: Fundacion Carlos Slim</p>
-                <p>Fecha de finalización: 31 MAY 2024</p>
-                <a href="curso ia.pdf" target="_blank">
-                    <img src="curso ia_page-0001.jpg" alt="Diseñador de peticiones para modelos de IAgenerativa">
-                </a>
+        <h2 id="courses-title">Mis Cursos Completados</h2>
+        <div class="course-carousel">
+            <div class="course-list">
+                <div class="course-card">
+                    <h3 id="course-1-title">Diseñador de peticiones para modelos de IAgenerativa</h3>
+                    <p id="course-1-institution">Institución: Fundacion Carlos Slim</p>
+                    <p id="course-1-date">Fecha de finalización: 31 MAY 2024</p>
+                    <a href="curso ia.pdf" target="_blank">
+                        <img src="curso ia_page-0001.jpg" alt="Diseñador de peticiones para modelos de IAgenerativa">
+                    </a>
+                </div>
+                <div class="course-card">
+                    <h3 id="course-2-title">Introduction to HTML</h3>
+                    <p id="course-2-institution">Institución: Sololearn</p>
+                    <p id="course-2-date">Fecha de finalización: Issued 06 September, 2024</p>
+                    <a href="curso in html.pdf" target="_blank">
+                        <img src="curso in html_page-0001.jpg" alt="Introduction to HTML">
+                    </a>
+                </div>
+                <div class="course-card">
+                    <h3 id="course-3-title">Operating Systems Basics</h3>
+                    <p id="course-3-institution">Institución: Cisco</p>
+                    <p id="course-3-date">Fecha de finalización: May 08 2024</p>
+                    <a href="Operating_Systems_Basics_Badge20240508-8-rplqts.pdf" target="_blank">
+                        <img src="Operating_Systems_Basics_Badge20240508-8-rplqts_page-0001.jpg" alt="Operating Systems Basics">
+                    </a>
+                </div>
+                <div class="course-card">
+                    <h3 id="course-4-title">Python Essentianls 1</h3>
+                    <p id="course-4-institution">Institución: Cisco</p>
+                    <p id="course-4-date">Fecha de finalización: May 07 2024</p>
+                    <a href="Python_Essentials_1_Badge20240507-9-gn7430.pdf" target="_blank">
+                        <img src="Python_Essentials_1_Badge20240507-9-gn7430_page-0001.jpg" alt="Python Essentianls 1">
+                    </a>
+                </div>
+                <div class="course-card">
+                    <h3 id="course-5-title">Python Essentianls 2</h3>
+                    <p id="course-5-institution">Institución: Cisco</p>
+                    <p id="course-5-date">Fecha de finalización: May 07 2024</p>
+                    <a href="Python Essentials 2.pdf" target="_blank">
+                        <img src="Python Essentials 2_page-0001.jpg" alt="Python Essentianls 2">
+                    </a>
+                </div>
             </div>
-            <div class="course-card">
-                <h3>Introduction to HTML</h3>
-                <p>Institución: Sololearn</p>
-                <p>Fecha de finalización: Issued 06 September, 2024</p>
-                <a href="curso in html.pdf" target="_blank">
-                    <img src="curso in html_page-0001.jpg" alt="Introduction to HTML">
-                </a>
-            </div>
-            <div class="course-card">
-                <h3>Operating Systems Basics</h3>
-                <p>Institución: Cisco</p>
-                <p>Fecha de finalización: May 08 2024</p>
-                <a href="Operating_Systems_Basics_Badge20240508-8-rplqts.pdf" target="_blank">
-                    <img src="Operating_Systems_Basics_Badge20240508-8-rplqts_page-0001.jpg" alt="Operating Systems Basics">
-                </a>
-            </div>
-            <div class="course-card">
-                <h3>Python Essentianls 1</h3>
-                <p>Institución: Cisco</p>
-                <p>Fecha de finalización: May 07 2024</p>
-                <a href="Python_Essentials_1_Badge20240507-9-gn7430.pdf" target="_blank">
-                    <img src="Python_Essentials_1_Badge20240507-9-gn7430_page-0001.jpg" alt="Python Essentianls 1">
-                </a>
-            </div>
-            <div class="course-card">
-                <h3>Python Essentianls 2</h3>
-                <p>Institución: Cisco</p>
-                <p>Fecha de finalización: May 07 2024</p>
-                <a href="Python Essentials 2.pdf" target="_blank">
-                    <img src="Python Essentials 2_page-0001.jpg" alt="Python Essentianls 2">
-                </a>
-            </div>
+            <!-- Botones de navegación del carrusel -->
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
         </div>
     </section>
-    
 
-    <section id="contact" class="animate">
-        <h2>Contacto</h2>
-        <p>Correo: <a href="mailto:alexrdz1221@gmail.com">alexrdz1221@gmail.com</a></p>
-        <p>Sígueme en:            
-            <a href="https://github.com/Spyker1" target="_blank">GitHub</a>
-        </p>
-    </section>
+    <!-- Sección de contacto -->
+<section id="contact" class="animate">
+    <h2 id="contact-title">Contacto</h2>
+    <p id="contact-email">Correo: <a href="mailto:alexrdz1221@gmail.com">alexrdz1221@gmail.com</a></p>
+    <p id="contact-follow">Sígueme en: <a href="https://github.com/Spyker1" target="_blank">GitHub</a></p>
+</section>
 
+
+    <!-- Iconos sociales -->
     <div id="social-icons">
         <a href="https://github.com/Spyker1" target="_blank" aria-label="GitHub">
             <i class="fab fa-github"></i>
@@ -112,13 +130,14 @@
             <i class="fab fa-linkedin"></i>
         </a>
     </div>
-    
 
+    <!-- Footer -->
     <footer class="animate">
-        <p>&copy; 2024 Julian Alejandro Rodríguez Lopez. Todos los derechos reservados.</p>
+        <p id="footer-text">&copy; 2024 Julian Alejandro Rodríguez Lopez. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Vinculación de JS -->
     <script src="manejador.js"></script>
+    <script src="traductor.js"></script> <!-- Script para cambio de idiomas -->
 </body>
 </html>

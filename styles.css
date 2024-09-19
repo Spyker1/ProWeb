@@ -337,13 +337,6 @@ button:hover {
     transition: background-color 0.5s ease, color 0.5s ease; /* Transiciones suaves */
 }
 
-.course-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centrar las tarjetas en la pantalla */
-    gap: 20px; /* Espacio entre las tarjetas */
-    margin-top: 20px;
-}
 
 .course-card {
     background-color: white; /* Fondo blanco en modo claro */
@@ -410,3 +403,55 @@ body.dark-mode .course-card img {
     }
 }
 
+.course-carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden; /* Oculta las tarjetas que no están visibles */
+}
+
+.course-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición suave al deslizar */
+}
+
+.course-card {
+    flex: 0 0 250px; /* Cada tarjeta ocupará 250px de ancho */
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.course-card img {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Estilo para los botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
