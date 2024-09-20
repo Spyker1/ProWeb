@@ -46,31 +46,53 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
+    const fadeElements = [
+        "main-title", "nav-about", "nav-projects", "nav-contact", "about-title", "about-description",
+        "projects-title", "interest-1", "interest-2", "interest-3", "interest-4", "interest-5",
+        "courses-title", "course-1-title", "course-1-institution", "course-1-date",
+        "contact-title", "contact-email", "contact-follow", "footer-text"
+    ];
+
+    // Función para aplicar animación de desvanecimiento (fade-out)
+    function applyFadeOut() {
+        fadeElements.forEach(id => {
+            document.getElementById(id).classList.add('fade-out');
+        });
+    }
+
     // Función para cambiar el idioma
     function changeLanguage(lang) {
-        document.getElementById("main-title").textContent = translations[lang].mainTitle;
-        document.getElementById("nav-about").textContent = translations[lang].navAbout;
-        document.getElementById("nav-projects").textContent = translations[lang].navProjects;
-        document.getElementById("nav-contact").textContent = translations[lang].navContact;
-        document.getElementById("about-title").textContent = translations[lang].aboutTitle;
-        document.getElementById("about-description").textContent = translations[lang].aboutDescription;
-        document.getElementById("projects-title").textContent = translations[lang].projectsTitle;
-        document.getElementById("interest-1").textContent = translations[lang].interest1;
-        document.getElementById("interest-2").textContent = translations[lang].interest2;
-        document.getElementById("interest-3").textContent = translations[lang].interest3;
-        document.getElementById("interest-4").textContent = translations[lang].interest4;
-        document.getElementById("interest-5").textContent = translations[lang].interest5;
-        document.getElementById("courses-title").textContent = translations[lang].coursesTitle;
-        document.getElementById("course-1-title").textContent = translations[lang].course1Title;
-        document.getElementById("course-1-institution").textContent = translations[lang].course1Institution;
-        document.getElementById("course-1-date").textContent = translations[lang].course1Date;
-        document.getElementById("contact-title").textContent = translations[lang].contactTitle;
+        // Aplicar el fade-out antes de cambiar el contenido
+        applyFadeOut();
         
-        // Asegúrate de usar innerHTML para los elementos que contienen HTML, como enlaces
-        document.getElementById("contact-email").innerHTML = translations[lang].contactEmail;
-        document.getElementById("contact-follow").innerHTML = translations[lang].contactFollow;
-
-        document.getElementById("footer-text").innerHTML = translations[lang].footerText; // Usamos innerHTML por el carácter "&copy;"
+        setTimeout(() => {
+            // Cambiar el contenido después del fade-out
+            document.getElementById("main-title").textContent = translations[lang].mainTitle;
+            document.getElementById("nav-about").textContent = translations[lang].navAbout;
+            document.getElementById("nav-projects").textContent = translations[lang].navProjects;
+            document.getElementById("nav-contact").textContent = translations[lang].navContact;
+            document.getElementById("about-title").textContent = translations[lang].aboutTitle;
+            document.getElementById("about-description").textContent = translations[lang].aboutDescription;
+            document.getElementById("projects-title").textContent = translations[lang].projectsTitle;
+            document.getElementById("interest-1").textContent = translations[lang].interest1;
+            document.getElementById("interest-2").textContent = translations[lang].interest2;
+            document.getElementById("interest-3").textContent = translations[lang].interest3;
+            document.getElementById("interest-4").textContent = translations[lang].interest4;
+            document.getElementById("interest-5").textContent = translations[lang].interest5;
+            document.getElementById("courses-title").textContent = translations[lang].coursesTitle;
+            document.getElementById("course-1-title").textContent = translations[lang].course1Title;
+            document.getElementById("course-1-institution").textContent = translations[lang].course1Institution;
+            document.getElementById("course-1-date").textContent = translations[lang].course1Date;
+            document.getElementById("contact-title").textContent = translations[lang].contactTitle;
+            document.getElementById("contact-email").innerHTML = translations[lang].contactEmail;
+            document.getElementById("contact-follow").innerHTML = translations[lang].contactFollow;
+            document.getElementById("footer-text").innerHTML = translations[lang].footerText;
+            
+            // Remover el fade-out para hacer el fade-in
+            fadeElements.forEach(id => {
+                document.getElementById(id).classList.remove('fade-out');
+            });
+        }, 500); // Espera el tiempo suficiente para que se complete el fade-out
     }
 
     // Event listeners para los botones de idioma

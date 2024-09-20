@@ -455,3 +455,41 @@ body.dark-mode .course-card img {
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+/* Estilo general para los botones */
+#language-selector {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#language-selector button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#language-selector button:hover {
+    transform: scale(1.1);
+    color: #0073e6;
+}
+
+/* Estilo de los botones con íconos de banderas */
+#language-selector button img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilo de la animación de desvanecimiento */
+.fade {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
