@@ -139,28 +139,10 @@ document.addEventListener("DOMContentLoaded", function() {
         createParticles(); // Recrear partículas en el nuevo tamaño
     });
     const courseList = document.querySelector('.course-list');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
 
     let currentIndex = 0;
 
-    function showCourses(index) {
-        const totalCourses = document.querySelectorAll('.course-card').length;
-        const courseWidth = document.querySelector('.course-card').clientWidth + 20; // Ancho de la tarjeta más márgenes
-        const maxIndex = totalCourses - 1;
 
-        if (index < 0) {
-            currentIndex = 0; // No permitir ir más atrás
-        } else if (index > maxIndex - 2) {
-            currentIndex = maxIndex - 2; // Limitar para que no sobrepase
-        } else {
-            currentIndex = index;
-        }
-
-        courseList.style.transform = `translateX(-${currentIndex * courseWidth}px)`;
-    }
-
-    prevButton.addEventListener('click', () => showCourses(currentIndex - 1));
-    nextButton.addEventListener('click', () => showCourses(currentIndex + 1));
+    
 });
 
