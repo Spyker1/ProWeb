@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0073e6">
     <title>Página Julian Alejandro Rodríguez Lopez</title>
 </head>
 <body>
@@ -118,6 +120,36 @@
     </div>
 </section>
 
+<section id="cv" class="animate">
+    <h2>Currículum Vitae</h2>
+    <div class="cv-summary">
+        <h3>Experiencia Laboral</h3>
+        <!-- Timeline o resumen -->
+        <div class="cv-timeline">
+            <div class="cv-item">
+                <h4>Desarrollador Fullstack</h4>
+                <p>Empresa XYZ | 2021 - Presente</p>
+                <p>Desarrollo de aplicaciones web utilizando HTML, CSS, JavaScript y Node.js.</p>
+            </div>
+            <!-- Más experiencias -->
+        </div>
+        <h3>Educación</h3>
+        <p>Licenciado en Ciencias de la Computación - Universidad ABC | 2018 - 2021</p>
+        <h3>Habilidades</h3>
+        <div class="skills">
+            <div class="skill">
+                <i class="fab fa-python"></i> Python
+            </div>
+            <div class="skill">
+                <i class="fab fa-js-square"></i> JavaScript
+            </div>
+            <!-- Más habilidades -->
+        </div>
+    </div>
+    <a href="cv.pdf" class="download-btn">Descargar CV</a>
+</section>
+
+
 
     <!-- Sección de contacto -->
 <section id="contact" class="animate">
@@ -146,5 +178,19 @@
     <script src="manejador.js"></script>
     <script src="traductor.js"></script> <!-- Script para cambio de idiomas -->
     <script src="desplazamientoM.js"></script>
+
+    <!-- PWA -->
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+              console.log('ServiceWorker registrado con éxito: ', registration.scope);
+            }, function(err) {
+              console.log('Error al registrar ServiceWorker: ', err);
+            });
+          });
+        }
+      </script>      
+
 </body>
 </html>

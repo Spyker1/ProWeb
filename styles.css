@@ -466,3 +466,77 @@ body.dark-mode .course-card img {
 .fade-out {
     opacity: 0;
 }
+
+/* cv */
+#cv {
+    padding: 40px 20px;
+    background-color: #f7f9fc;
+    text-align: left;
+}
+
+.cv-summary h3 {
+    color: #0073e6;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.cv-timeline .cv-item {
+    margin-bottom: 20px;
+    border-left: 3px solid #0073e6;
+    padding-left: 10px;
+}
+
+.cv-item h4 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.skills {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill i {
+    font-size: 2em;
+    color: #0073e6;
+    margin-right: 10px;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Modo oscuro: CV */
+body.dark-mode #cv {
+    background-color: #1e1e1e; /* Fondo oscuro para el CV */
+    color: white; /* Texto blanco para el CV */
+}
+
+body.dark-mode #cv h3, body.dark-mode #cv h4 {
+    color: #bb86fc; /* Cambiar el color de los títulos */
+}
+
+body.dark-mode .cv-item {
+    border-left-color: #bb86fc; /* Cambiar el color de la línea en el timeline */
+}
+
+body.dark-mode .download-btn {
+    background-color: #bb86fc; /* Cambiar el color del botón de descarga */
+    color: #f7f9fc;
+}
+
+body.dark-mode .download-btn:hover {
+    background-color: #8b59c4; /* Color de hover para el botón en modo oscuro */
+    color: #f7f9fc;
+}
