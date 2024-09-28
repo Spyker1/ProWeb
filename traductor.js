@@ -14,13 +14,29 @@ document.addEventListener("DOMContentLoaded", function() {
             interest4: "Programación con Low Code.",
             interest5: "Desarrollo de APIs.",
             coursesTitle: "Mis Cursos Completados",
-            course1Title: "Diseñador de peticiones para modelos de IAgenerativa",
-            course1Institution: "Institución: Fundacion Carlos Slim",
-            course1Date: "Fecha de finalización: 31 MAY 2024",
             contactTitle: "Contacto",
-            contactEmail: "Correo: <a href='mailto:alexrdz1221@gmail.com'>alexrdz1221@gmail.com</a>",
-            contactFollow: "Sígueme en: <a href='https://github.com/Spyker1' target='_blank'>GitHub</a>",
-            footerText: "&copy; 2024 Julian Alejandro Rodríguez Lopez. Todos los derechos reservados."
+            contactEmail: "Correo: alexrdz1221@gmail.com",
+            contactFollow: "Sígueme en:",
+            footerText: "&copy; 2024 Julian Alejandro Rodríguez Lopez. Todos los derechos reservados.",
+            
+            // Traducción del CV
+            cvTitle: "Currículum Vitae",
+            experienceTitle: "Experiencia Laboral",
+            educationTitle: "Educación",
+            skillsTitle: "Habilidades",
+            job1Title: "Desarrollador Fullstack",
+            job1Company: "Empresa ProInternet",
+            job1Period: "2023 - 2024",
+            job1Description: "Desarrollo de aplicaciones web utilizando HTML, CSS, JavaScript, SQL y Node.js.",
+            educationInfo: "Ingeniería en Sistemas Computacionales - Instituto Tecnologico de Ciudad Madero | 2021 - actualidad",
+            skillPython: "Python",
+            skillJavaScript: "JavaScript",
+            skillJava: "Java",
+            skillJSON: "JSON",
+            skillHTML: "HTML",
+            skillCSS: "CSS",
+            skillSQL: "SQL",
+            skillHBS: "HBS (Handlebars)"
         },
         en: {
             mainTitle: "Welcome to the page of Julian Alejandro Rodríguez Lopez",
@@ -36,63 +52,68 @@ document.addEventListener("DOMContentLoaded", function() {
             interest4: "Low Code Programming.",
             interest5: "API Development.",
             coursesTitle: "My Completed Courses",
-            course1Title: "Request Designer for Generative AI Models",
-            course1Institution: "Institution: Fundacion Carlos Slim",
-            course1Date: "Completion Date: May 31, 2024",
             contactTitle: "Contact",
-            contactEmail: "Email: <a href='mailto:alexrdz1221@gmail.com'>alexrdz1221@gmail.com</a>",
-            contactFollow: "Follow me on: <a href='https://github.com/Spyker1' target='_blank'>GitHub</a>",
-            footerText: "&copy; 2024 Julian Alejandro Rodríguez Lopez. All rights reserved."
+            contactEmail: "Email: alexrdz1221@gmail.com",
+            contactFollow: "Follow me on:",
+            footerText: "&copy; 2024 Julian Alejandro Rodríguez Lopez. All rights reserved.",
+            
+            // Traducción del CV
+            cvTitle: "Curriculum Vitae",
+            experienceTitle: "Work Experience",
+            educationTitle: "Education",
+            skillsTitle: "Skills",
+            job1Title: "Fullstack Developer",
+            job1Company: "ProInternet Company",
+            job1Period: "2023 - 2024",
+            job1Description: "Developed web applications using HTML, CSS, JavaScript, SQL, and Node.js.",
+            educationInfo: "Computer Systems Engineering - Instituto Tecnologico de Ciudad Madero | 2021 - present",
+            skillPython: "Python",
+            skillJavaScript: "JavaScript",
+            skillJava: "Java",
+            skillJSON: "JSON",
+            skillHTML: "HTML",
+            skillCSS: "CSS",
+            skillSQL: "SQL",
+            skillHBS: "HBS (Handlebars)"
         }
     };
 
-    const fadeElements = [
-        "main-title", "nav-about", "nav-projects", "nav-contact", "about-title", "about-description",
-        "projects-title", "interest-1", "interest-2", "interest-3", "interest-4", "interest-5",
-        "courses-title", "course-1-title", "course-1-institution", "course-1-date",
-        "contact-title", "contact-email", "contact-follow", "footer-text"
-    ];
-
-    // Función para aplicar animación de desvanecimiento (fade-out)
-    function applyFadeOut() {
-        fadeElements.forEach(id => {
-            document.getElementById(id).classList.add('fade-out');
-        });
-    }
-
     // Función para cambiar el idioma
     function changeLanguage(lang) {
-        // Aplicar el fade-out antes de cambiar el contenido
-        applyFadeOut();
-        
-        setTimeout(() => {
-            // Cambiar el contenido después del fade-out
-            document.getElementById("main-title").textContent = translations[lang].mainTitle;
-            document.getElementById("nav-about").textContent = translations[lang].navAbout;
-            document.getElementById("nav-projects").textContent = translations[lang].navProjects;
-            document.getElementById("nav-contact").textContent = translations[lang].navContact;
-            document.getElementById("about-title").textContent = translations[lang].aboutTitle;
-            document.getElementById("about-description").textContent = translations[lang].aboutDescription;
-            document.getElementById("projects-title").textContent = translations[lang].projectsTitle;
-            document.getElementById("interest-1").textContent = translations[lang].interest1;
-            document.getElementById("interest-2").textContent = translations[lang].interest2;
-            document.getElementById("interest-3").textContent = translations[lang].interest3;
-            document.getElementById("interest-4").textContent = translations[lang].interest4;
-            document.getElementById("interest-5").textContent = translations[lang].interest5;
-            document.getElementById("courses-title").textContent = translations[lang].coursesTitle;
-            document.getElementById("course-1-title").textContent = translations[lang].course1Title;
-            document.getElementById("course-1-institution").textContent = translations[lang].course1Institution;
-            document.getElementById("course-1-date").textContent = translations[lang].course1Date;
-            document.getElementById("contact-title").textContent = translations[lang].contactTitle;
-            document.getElementById("contact-email").innerHTML = translations[lang].contactEmail;
-            document.getElementById("contact-follow").innerHTML = translations[lang].contactFollow;
-            document.getElementById("footer-text").innerHTML = translations[lang].footerText;
-            
-            // Remover el fade-out para hacer el fade-in
-            fadeElements.forEach(id => {
-                document.getElementById(id).classList.remove('fade-out');
-            });
-        }, 500); // Espera el tiempo suficiente para que se complete el fade-out
+        document.getElementById("main-title").textContent = translations[lang].mainTitle;
+        document.getElementById("nav-about").textContent = translations[lang].navAbout;
+        document.getElementById("nav-projects").textContent = translations[lang].navProjects;
+        document.getElementById("nav-contact").textContent = translations[lang].navContact;
+        document.getElementById("about-title").textContent = translations[lang].aboutTitle;
+        document.getElementById("about-description").textContent = translations[lang].aboutDescription;
+        document.getElementById("projects-title").textContent = translations[lang].projectsTitle;
+        document.getElementById("interest-1").textContent = translations[lang].interest1;
+        document.getElementById("interest-2").textContent = translations[lang].interest2;
+        document.getElementById("interest-3").textContent = translations[lang].interest3;
+        document.getElementById("interest-4").textContent = translations[lang].interest4;
+        document.getElementById("interest-5").textContent = translations[lang].interest5;
+        document.getElementById("courses-title").textContent = translations[lang].coursesTitle;
+        document.getElementById("contact-title").textContent = translations[lang].contactTitle;
+        document.getElementById("contact-email").textContent = translations[lang].contactEmail;
+        document.getElementById("contact-follow").textContent = translations[lang].contactFollow;
+        document.getElementById("footer-text").innerHTML = translations[lang].footerText;
+        document.getElementById("cv-title").textContent = translations[lang].cvTitle;
+        document.getElementById("experience-title").textContent = translations[lang].experienceTitle;
+        document.getElementById("education-title").textContent = translations[lang].educationTitle;
+        document.getElementById("skills-title").textContent = translations[lang].skillsTitle;
+        document.getElementById("job-1-title").textContent = translations[lang].job1Title;
+        document.getElementById("job-1-company").textContent = translations[lang].job1Company;
+        document.getElementById("job-1-period").textContent = translations[lang].job1Period;
+        document.getElementById("job-1-description").textContent = translations[lang].job1Description;
+        document.getElementById("education-info").textContent = translations[lang].educationInfo;
+        document.getElementById("skill-python").textContent = translations[lang].skillPython;
+        document.getElementById("skill-javascript").textContent = translations[lang].skillJavaScript;
+        document.getElementById("skill-java").textContent = translations[lang].skillJava;
+        document.getElementById("skill-json").textContent = translations[lang].skillJSON;
+        document.getElementById("skill-html").textContent = translations[lang].skillHTML;
+        document.getElementById("skill-css").textContent = translations[lang].skillCSS;
+        document.getElementById("skill-sql").textContent = translations[lang].skillSQL;
+        document.getElementById("skill-hbs").textContent = translations[lang].skillHBS;
     }
 
     // Event listeners para los botones de idioma

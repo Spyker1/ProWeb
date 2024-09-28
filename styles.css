@@ -531,9 +531,6 @@ body.dark-mode .skill i {
     color: #bb86fc;
 }
 
-
-
-
 /* Modo oscuro: CV */
 body.dark-mode #cv {
     background-color: #1e1e1e; /* Fondo oscuro para el CV */
@@ -548,3 +545,73 @@ body.dark-mode .cv-item {
     border-left-color: #bb86fc; /* Cambiar el color de la línea en el timeline */
 }
 
+/* Estilos para la sección de proyectos */
+#projects {
+    padding: 40px 20px;
+    background-color: #f7f9fc;
+    text-align: center;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+    color: #005bb5;
+}
+
+/* Modo oscuro para los proyectos */
+body.dark-mode #projects {
+    background-color: #121212;
+}
+
+body.dark-mode .project-card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode .project-card h3 {
+    color: #bb86fc;
+}
+
+body.dark-mode .project-link {
+    color: #bb86fc;
+}
