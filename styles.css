@@ -493,29 +493,46 @@ body.dark-mode .course-card img {
 
 .skills {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    color: #333;
+    background-color: #f7f9fc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill i {
+    margin-right: 10px;
     font-size: 2em;
     color: #0073e6;
-    margin-right: 10px;
 }
 
-.download-btn {
-    display: inline-block;
-    background-color: #0073e6;
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Modo oscuro */
+body.dark-mode .skill {
+    background-color: #1e1e1e;
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
-.download-btn:hover {
-    background-color: #005bb5;
+body.dark-mode .skill i {
+    color: #bb86fc;
 }
+
+
+
 
 /* Modo oscuro: CV */
 body.dark-mode #cv {
@@ -531,12 +548,3 @@ body.dark-mode .cv-item {
     border-left-color: #bb86fc; /* Cambiar el color de la línea en el timeline */
 }
 
-body.dark-mode .download-btn {
-    background-color: #bb86fc; /* Cambiar el color del botón de descarga */
-    color: #f7f9fc;
-}
-
-body.dark-mode .download-btn:hover {
-    background-color: #8b59c4; /* Color de hover para el botón en modo oscuro */
-    color: #f7f9fc;
-}
